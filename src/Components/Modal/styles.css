@@ -1,0 +1,6 @@
+.Modal{
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+}

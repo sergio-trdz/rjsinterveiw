@@ -6,12 +6,13 @@ import Resumen from './Components/Utilities/Resumen';
 import './App.css';
 import NewComponent from './Components/Utilities/NewComponent';
 import Home from './Pages/Home/index.jsx'
+import Layout from './Components/Layout/index.jsx'
 
 function App() {
   return (
-    <div className="App">
+    <Layout>
       <Home />
-    </div>
+    </Layout>
   );
 }
 

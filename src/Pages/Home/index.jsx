@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from '../../Components/Modal/index.jsx';
-import Container from '@material-ui/core/Container';
+import { Container as C} from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -19,10 +19,10 @@ const Home = () => {
     const classes = useStyles();
 
     return(
-        <Container className={classes.container} color='prrmary' maxWidth='xl'>
+        <C className={classes.container} color='prrmary' maxWidth='xl'>
             <Modal />
             <Button>Siguiente</Button>
-        </Container>
+        </C>
     )
 }
 

@@ -15,6 +15,12 @@ const useStyles = makeStyles ((theme) => ({
         justifyContent: "space-evenly",
         height: "80vh",
         width: "100vw"
+    },
+    entrevistador: {
+        alignItems: "center", 
+        display:"flex",
+        justifyItems: "center",
+        flexDirection: "column"
     }
 }));
 
@@ -29,11 +35,16 @@ const Home = () => {
     const handleOnClick = () => history.push('/candidato')
 
     return(
+        <div>
+            <div  className={classes.entrevistador}>
+                <h1>Entrevistador</h1>
+            </div>
         <Container className={classes.container} color='primary' maxWidth='xl'>
             { user !== null && <Card1 user={user} />}
             <Modal1 />
             <Button disabled={user === null ? true : false} onClick={handleOnClick}>Siguiente</Button>
         </Container>
+        </div>
     )
 }
 

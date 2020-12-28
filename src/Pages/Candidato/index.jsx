@@ -18,6 +18,13 @@ const useStyles = makeStyles ((theme) => ({
         justifyItems: "center",
         height: "80vh",
         width: "100vw"
+    },
+    
+    candidato: {
+        alignItems: "center", 
+        display:"flex",
+        justifyItems: "center",
+        flexDirection: "column"
     }
 }))
 
@@ -31,7 +38,9 @@ const Candidato = () => {
 
     return (
         <div>
-            <div style><h1>Candidato</h1></div>
+            <div  className={classes.candidato}>
+                <h1>Candidato</h1>
+            </div>
         <Container className={classes.container}>
             { candidato !== null && <Card2 candidato={candidato}/> }
             <Modal2 />

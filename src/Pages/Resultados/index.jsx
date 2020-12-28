@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ResultadosLeft from '../../Components/ResultadosLeft/index.jsx';
 import ResultadosRight from '../../Components/ResultadosRight/index.jsx';
-import ResultadosBottomLeft from '../../Components/ResultadosBottomLeft/index.jsx';
+import ResultadosBottomLeft from '../../Components/ResultadosBottom/index.jsx';
 import ResultadosBottomRight from '../../Components/ResultadosBottomRight/index.jsx';
 
 const useStyles = makeStyles ((theme) => ({

@@ -10,15 +10,15 @@ const useStyles = makeStyles({
   root: {
     minWidth: 275,
     position: "absolute",
-    top: "20px",
-    left: "20px"
+    top: "140px",
+    left: "200px"
   },
   container: {
     display: "flex",
     flexDirection: "column"
   },
   button: {
-    display:'flex'
+    display: 'flex'
   }
 });
 

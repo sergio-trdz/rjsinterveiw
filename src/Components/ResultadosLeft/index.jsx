@@ -20,7 +20,6 @@ const ResultadosLeft = () => {
 
     return (
         <div className={classes.container}>
-            <h2>Resumen</h2>
             <h4>Datos</h4>
             <p>{`Entrevistador: ${user?.name} id: ${user?.numId}`}</p>
             <p>{`Candidato: ${candidato?.name} id: ${user?.email}`}</p>

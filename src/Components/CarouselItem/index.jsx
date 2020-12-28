@@ -49,7 +49,7 @@ const CarouselItem = ({id, question, topic}) => {
     return (
         <div className={classes.container}>
             <small>{topic}</small>
-            <h2>{question}</h2>
+            <h3>{question}</h3>
             <div>
             <Button onClick={handleOnFalso}>Incorrect</Button>
             <Button onClick={handleOnCorrecto}>Correcto</Button>

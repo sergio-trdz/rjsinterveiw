@@ -1,14 +1,13 @@
 import React, { useContext, useEffect } from 'react';
-import Carousel from 'react-material-ui-carousel'
-import Button from '@material-ui/core/Button';
+import Carousel from 'react-material-ui-carousel';
 import { makeStyles } from '@material-ui/core/styles';
 import { Context } from '../../utils/Context.jsx';
 import CarouselItem from '../CarouselItem/index.jsx';
-import reactQuestions from '../../utils/questions.js'
+import reactQuestions from '../../utils/questions.js';
 
 const useStyles = makeStyles ((theme) => ({
   container: {
-    height: "80vh"
+    height: "80vh",
   }
 }));
 

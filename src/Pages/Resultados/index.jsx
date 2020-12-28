@@ -1,11 +1,9 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import { Container } from '@material-ui/core';
-import { Context } from '../../utils/Context.jsx';
 import ResultadosLeft from '../../Components/ResultadosLeft/index.jsx';
 import ResultadosRight from '../../Components/ResultadosRight/index.jsx';
-import ResultadosBottom from '../../Components/ResultadosBottom/index.jsx';
+import ResultadosBottomLeft from '../../Components/ResultadosBottomLeft/index.jsx';
+import ResultadosBottomRight from '../../Components/ResultadosBottomRight/index.jsx';
 
 const useStyles = makeStyles ((theme) => ({
     container: {
@@ -21,6 +19,12 @@ const useStyles = makeStyles ((theme) => ({
         display: 'flex',
         justifyContent: 'space-evenly',
         width: "100%"
+    },
+    containerBottom: {
+        display: 'flex',
+        justifyContent: 'space-evenly',
+        width: "100%",
+        marginTop: "200px"
     }
 }))
 
@@ -29,15 +33,17 @@ const Resultados = () => {
 
     const classes = useStyles()
 
-    const { user, questions, candidato, option } = useContext(Context)
-
     return (
         <div className={classes.container}>
+            <h2>Resumen</h2>
             <div className={classes.subContainer}>
                 <ResultadosLeft />
                 <ResultadosRight />
             </div>
-            <ResultadosBottom />
+            <div className={classes.containerBottom}>
+                <ResultadosBottomLeft />
+                <ResultadosBottomRight />
+            </div>
         </div>
     )
 }

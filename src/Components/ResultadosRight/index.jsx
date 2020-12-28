@@ -1,9 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import { Container } from '@material-ui/core';
 import { Context } from '../../utils/Context.jsx';
-import { useHistory } from 'react-router-dom';
 import Modal4 from '../../Components/Modal4/index.jsx';
 
 const useStyles = makeStyles ((theme) => ({
@@ -36,9 +33,9 @@ const ResultadosRight = () => {
 
     return (
         <div className={classes.container}>
-            <h3>
+            <h4>
                 Resultados
-            </h3>
+            </h4>
             <div>
                 {
                     notes?.map(item => <p>{`${item?.topic} ${item?.note}`}</p>)

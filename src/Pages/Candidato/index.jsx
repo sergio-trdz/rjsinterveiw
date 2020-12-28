@@ -29,9 +29,9 @@ const Candidato = () => {
 
     const { candidato, option } = useContext(Context)
 
-    const handleonClick = () => history.push('/preguntas')
-
     return (
+        <div>
+            <div style><h1>Candidato</h1></div>
         <Container className={classes.container}>
             { candidato !== null && <Card2 candidato={candidato}/> }
             <Modal2 />
@@ -39,6 +39,7 @@ const Candidato = () => {
             <Button onClick={() => history.push('/')}>Atras</Button>
             <Button onClick={() => history.push('/preguntas')} disabled={candidato && option ? false: true}>Siguiente</Button>
         </Container>
+        </div>
     )
 }
 

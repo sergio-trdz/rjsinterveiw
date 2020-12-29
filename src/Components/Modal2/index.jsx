@@ -25,9 +25,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TransitionsModal() {
 
-  const { setCandidato, candidato } = useContext(Context)
-
   const classes = useStyles();
+
+  const { setCandidato, candidato } = useContext(Context)
 
   const [open, setOpen] = useState(false);
 

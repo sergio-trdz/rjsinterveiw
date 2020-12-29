@@ -46,7 +46,11 @@ const Candidato = () => {
             <Modal2 />
             <Modal3 />
             <Button onClick={() => history.push('/')}>Atras</Button>
-            <Button onClick={() => history.push('/preguntas')} disabled={candidato && option ? false: true}>Siguiente</Button>
+            <Button 
+                onClick={() => history.push('/preguntas')} 
+                disabled={candidato && option ? false: true}
+                >Siguiente
+            </Button>
         </Container>
         </div>
     )

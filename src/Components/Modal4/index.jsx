@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { Context } from '../../utils/Context.jsx'
 
@@ -44,8 +43,6 @@ export default function TransitionsModal() {
     setOpen(false);
   };
 
-  console.log(questions)
-
   return (
     <div>
     <Button type="button" onClick={handleOpen}>
@@ -69,8 +66,8 @@ export default function TransitionsModal() {
               questions?.map(item => (
                 <div key={item?.id}>
                   <p>{`Pregunta: ${item?.question}`}</p>
-                  <p>{`Es correcto: ${item?.correct ? 'afirmativo' : 'negativo'}`}</p>
-                  <p>{`Pregunta: ${item?.comentario}`}</p>
+                  <p>{`Respuesta: ${item?.correct ? 'Correcto' : 'Incorrecto'}`}</p>
+                  <p>{`Comentario: ${item?.comentario}`}</p>
                 </div>
               ))
             }

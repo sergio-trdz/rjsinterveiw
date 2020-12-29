@@ -9,9 +9,9 @@ import { TextField } from '@material-ui/core';
 const useStyles = makeStyles({
   root: {
     minWidth: 275,
-    position: "absolute",
-    top: "140px",
-    left: "200px"
+    // position: "absolute",
+    // top: "140px",
+    // left: "200px"
   },
   container: {
     display: "flex",

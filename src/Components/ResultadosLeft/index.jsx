@@ -1,9 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import { Container } from '@material-ui/core';
 import { Context } from '../../utils/Context.jsx';
-import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles ((theme) => ({
     container: {
@@ -21,8 +18,21 @@ const ResultadosLeft = () => {
     return (
         <div className={classes.container}>
             <h4>Datos</h4>
-            <p>{`Entrevistador: ${user?.name} id: ${user?.numId}`}</p>
-            <p>{`Candidato: ${candidato?.name} id: ${user?.email}`}</p>
+            <p>{`Entrevistador: ${user?.name}`}</p>
+            <p>{`Id: ${user?.numId}`}</p>
+            <p>{`Candidato: ${candidato?.name}`}</p>
+            <p>{`Correo: ${user?.email}`}</p>
+            {/* <h4>Datos</h4>
+            <h5>Entrevistador</h5>
+            <p>Nombre completo:</p>
+            <p>{`${user?.name}`}</p>
+            <p>Id de usuario:</p>
+            <p>{`${user?.numId}`}</p>
+            <h5>Candidato</h5>
+            <p>Nombre completo:</p>
+            <p>{`${candidato?.name}`}</p>
+            <p>Correo electronico:</p>
+            <p>{`${candidato?.email}`}</p> */}
         </div>
     )
 }

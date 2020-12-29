@@ -24,7 +24,7 @@ const useStyles = makeStyles ((theme) => ({
         display: 'flex',
         justifyContent: 'space-evenly',
         width: "100%",
-        marginTop: "200px"
+        marginTop: "150px"
     }
 }))
 

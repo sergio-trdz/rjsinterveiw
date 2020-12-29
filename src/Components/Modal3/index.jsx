@@ -3,10 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Checkbox from '@material-ui/core/Checkbox';
-import { Context } from '../../utils/Context.jsx'
+import { Context } from '../../utils/Context.jsx';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -27,6 +26,8 @@ const useStyles = makeStyles((theme) => ({
 export default function TransitionsModal() {
 
   const classes = useStyles();
+
+  const [ openModal, setOpenModal ] = useState(null);
 
   const [localOption, setLocalOption] = useState([])
   const [uniqueValues, setUniqueValues] = useState(new Set)
@@ -56,7 +57,7 @@ export default function TransitionsModal() {
 
   return (
     <div>
-      { option === null && (
+      { openModal === null && (
         <Button type="button" onClick={handleOpen}>
           Agregar Temas
         </Button>

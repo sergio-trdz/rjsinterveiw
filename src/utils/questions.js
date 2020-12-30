@@ -19,7 +19,7 @@ const reactQuestions = [
   }
   ,  {
     id: 3,
-    question: '¿Cual es el resultado de 2 + \"3\"?',
+    question: '¿Cual es el resultado de 2 + "3"?',
     topic: 'javaScript',
     correct: false
   }

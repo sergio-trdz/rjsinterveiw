@@ -3,12 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Context } from '../../utils/Context.jsx';
 import Modal4 from '../../Components/Modal4/index.jsx';
 
-const useStyles = makeStyles ((theme) => ({
+const useStyles = makeStyles ({
     container: {
         display:"flex",
         flexDirection: "column",
     }
-}))
+})
 
 const ResultadosRight = () => {
 

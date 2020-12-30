@@ -5,15 +5,15 @@ import { Context } from '../../utils/Context.jsx';
 import CarouselItem from '../CarouselItem/index.jsx';
 import reactQuestions from '../../utils/questions.js';
 
-const useStyles = makeStyles ((theme) => ({
+const useStyles = makeStyles ({
   container: {
     height: "80vh",
   }
-}));
+});
 
 const ViewQuestions = () => {
 
-  const { setQuestions, questions, option } = useContext(Context)
+  const { setQuestions, questions } = useContext(Context)
 
   const classes = useStyles();
 

@@ -25,9 +25,13 @@ const useStyles = makeStyles((theme) => ({
 
 export default function TransitionsModal() {
 
+    const selectedText = () => {
+    console.log("You selected some text");
+}
+
   const classes = useStyles();
 
-  const [ openModal, setOpenModal ] = useState(null);
+  const [ openModal ] = useState(null);
 
   const [localOption, setLocalOption] = useState([])
   const [uniqueValues, setUniqueValues] = useState(new Set)

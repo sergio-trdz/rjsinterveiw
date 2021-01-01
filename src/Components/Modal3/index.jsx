@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
+  button: {
+    alignItems: 'center',
+  }
 }));
 
 export default function TransitionsModal() {
@@ -34,8 +37,9 @@ export default function TransitionsModal() {
   const [ openModal ] = useState(null);
 
   const [localOption, setLocalOption] = useState([])
-  const [uniqueValues, setUniqueValues] = useState(new Set)
   const [open, setOpen] = useState(false);
+  const [ isReactSelected, setIsReactSelected ] = useState(false)
+  const [ isJSSelected, setIsJSSelected ] = useState(false)
 
   const { option, setOption } = useContext(Context)
 
@@ -47,16 +51,34 @@ export default function TransitionsModal() {
     setOpen(false);
   };
 
+  const checkReact = () => isReactSelected && {topic: 'react'}
+
+  const checkJs = () => isJSSelected && {topic: 'javaScript'}
+
   const handleOnClick = () => {
     handleClose()
     
-    localOption.forEach(item => uniqueValues.add(item.topic))
+    const rawdata = [checkReact(), checkJs()]
 
-    setOption(uniqueValues)
+    const data = rawdata.filter(item => item !== false) 
+
+    setOption(data)
   }
 
-  const handleOnChange = (value) => {
-    setLocalOption(values => values.concat(value))
+  const handleOnChangeReact = () => {
+    if (isReactSelected) {
+      setIsReactSelected(false)
+    } else {
+      setIsReactSelected(true)
+    }
+  }
+
+  const handleOnChangeJS = () => {
+    if (isJSSelected) {
+      setIsJSSelected(false)
+    } else {
+      setIsJSSelected(true)
+    }
   }
 
   return (
@@ -86,17 +108,19 @@ export default function TransitionsModal() {
             </label>
             <Checkbox
             color="primary"
-            onChange={() => handleOnChange({topic: "javaScript"})}
+            onChange={handleOnChangeJS}
             />
             <label>
               React
             </label>
             <Checkbox
             color="primary"
-            onChange={() => handleOnChange({topic:"react"})}
+            onChange={handleOnChangeReact}
             />
             </div>
-          <Button onClick={handleOnClick}>Guardar</Button>
+            <Button 
+              onClick={handleOnClick}
+              className={classes.button}>Guardar</Button>
           </div>
         </Fade>
       </Modal>

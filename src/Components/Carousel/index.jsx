@@ -13,12 +13,16 @@ const useStyles = makeStyles ({
 
 const ViewQuestions = () => {
 
-  const { setQuestions, questions } = useContext(Context)
+  const { setQuestions, questions, option } = useContext(Context)
+  const [localQuestions, setLocalQuestions] = useState([])
 
   const classes = useStyles();
 
   useEffect(() => {
-    setQuestions(reactQuestions)
+    option.forEach(item => {
+      if (item?.topic === 'react') setQuestions(reactQuestions)
+      if (item?.topic === 'javaScript') setQuestions(reactQuestions)
+    })
   } ,[])
 
     return (

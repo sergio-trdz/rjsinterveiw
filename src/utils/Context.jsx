@@ -8,7 +8,7 @@ export const ContextProvider = ({children}) => {
 
   const [ candidato, setCandidato ] = useState(null);
 
-  const [option, setOption] = useState([{topic: 'react'}, {topic: 'javaScript'}])
+  const [option, setOption] = useState(undefined)
 
   const [questions, setQuestions] = useState(null)
 

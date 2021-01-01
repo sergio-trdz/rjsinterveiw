@@ -5,6 +5,7 @@ import { Container } from '@material-ui/core';
 import Modal2 from '../../Components/Modal2/index.jsx';
 import Modal3 from '../../Components/Modal3/index.jsx';
 import Card2 from '../../Components/Card2/index.jsx';
+import Card3 from '../../Components/Card3/index.jsx';
 import { Context } from '../../utils/Context.jsx';
 import { useHistory } from 'react-router-dom';
 
@@ -42,13 +43,17 @@ const Candidato = () => {
                 <h1>Candidato</h1>
             </div>
         <Container className={classes.container}>
-            { candidato !== null && <Card2 candidato={candidato}/> }
-            <Modal2 />
-            <Modal3 />
+            { 
+                candidato !== null ? <Card2 candidato={candidato}/> : <Modal2 />
+            }
+
+            { 
+                option !== undefined ? <Card3 list={option}/> : <Modal3 />
+            }
             <Button onClick={() => history.push('/')}>Atras</Button>
             <Button 
                 onClick={() => history.push('/preguntas')} 
-                disabled={candidato && option ? false: true}
+                disabled={candidato && option ? false : true}
                 >Siguiente
             </Button>
         </Container>

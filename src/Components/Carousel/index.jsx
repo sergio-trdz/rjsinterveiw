@@ -14,7 +14,7 @@ const useStyles = makeStyles ({
 const ViewQuestions = () => {
 
   const { setQuestions, questions, option } = useContext(Context)
-  const [localQuestions, setLocalQuestions] = useState([])
+  // const [localQuestions, setLocalQuestions] = useState([])
 
   const classes = useStyles();
 

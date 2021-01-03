@@ -5,6 +5,7 @@ import Candidato from './Pages/Candidato/index.jsx'
 import Preguntas from './Pages/Preguntas/index.jsx'
 import Resultados from './Pages/Resultados/index.jsx'
 import Layout from './Components/Layout/index.jsx'
+import NotFound from './Pages/NotFound/index.jsx'
 import { Route, Switch } from 'react-router-dom'
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route exact path='/resultados'>
           <Resultados />
+        </Route>
+        <Route component={NotFound}> 
+          <NotFound />
         </Route>
       </Switch>
     </Layout>

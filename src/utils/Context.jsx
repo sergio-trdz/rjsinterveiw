@@ -10,7 +10,7 @@ export const ContextProvider = ({children}) => {
 
   const [option, setOption] = useState(undefined)
 
-  const [questions, setQuestions] = useState(null)
+  const [questions, setQuestions] = useState([])
 
   return(
     <Context.Provider value={{

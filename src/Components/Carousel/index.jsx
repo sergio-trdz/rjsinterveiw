@@ -3,7 +3,8 @@ import Carousel from 'react-material-ui-carousel';
 import { makeStyles } from '@material-ui/core/styles';
 import { Context } from '../../utils/Context.jsx';
 import CarouselItem from '../CarouselItem/index.jsx';
-import reactQuestions from '../../utils/questions.js';
+import reactQuestions from '../../utils/reactQuestions.js';
+import jsQuestions from '../../utils/jsQuestions.js';
 
 const useStyles = makeStyles ({
   container: {
@@ -14,14 +15,13 @@ const useStyles = makeStyles ({
 const ViewQuestions = () => {
 
   const { setQuestions, questions, option } = useContext(Context)
-  // const [localQuestions, setLocalQuestions] = useState([])
 
   const classes = useStyles();
 
   useEffect(() => {
     option.forEach(item => {
-      if (item?.topic === 'react') setQuestions(reactQuestions)
-      if (item?.topic === 'javaScript') setQuestions(reactQuestions)
+      if (item?.topic === 'react') setQuestions(data => data?.concat(reactQuestions))
+      if (item?.topic === 'javaScript') setQuestions(data => data?.concat(jsQuestions))
     })
   } ,[])
 

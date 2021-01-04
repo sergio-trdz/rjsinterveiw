@@ -1,4 +1,4 @@
-const reactQuestions = [
+const jsQuestions = [
   {
     id: 0,
     question: '¿Que diferencia existe entre var, let y const?',
@@ -29,36 +29,6 @@ const reactQuestions = [
     topic: 'javaScript',
     correct: false
   },
-  {
-    id: 5,
-    question: '¿Que significa npm?',
-    topic: 'react',
-    correct: false
-  },
-  {
-    id: 6,
-    question: '¿React JS es una libreria o un framework?',
-    topic: 'react',
-    correct: false
-  },
-  {
-    id: 7,
-    question: '¿Que es JSX?',
-    topic: 'react',
-    correct: false
-  }
-  ,  {
-    id: 8,
-    question: '¿Que es un estado?',
-    topic: 'react',
-    correct: false
-  }
-  ,  {
-    id: 9,
-    question: '¿Que son los props?',
-    topic: 'react',
-    correct: false
-  }
 ]
 
-export default reactQuestions;
+export default jsQuestions;
